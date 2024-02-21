@@ -13,8 +13,6 @@ env:
 jobs:
   test-build:
     runs-on: ubuntu-latest
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     defaults:
       run:
         working-directory: 14-artifacts/react-app
@@ -33,9 +31,9 @@ jobs:
           key: deps-node-modules-${{ hashFiles('14-artifacts/react-app/package-lock.json') }}
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
       - name: Unit tests
-        run: npm run test  
+        run: npm run test -- --coverage
       #- name: Upload test results
        # uses: actions/upload-artifact@v4
         #with:
@@ -48,7 +46,8 @@ jobs:
        # run: npm adduser --registry=https://npm.pkg.github.com/ --scope=@ythrinathareddy --always-auth
       #- name: Set up npmrc
        # run: echo "//npm.pkg.github.com/:_authToken=\${NODE_AUTH_TOKEN}" > .npmrc
-        
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: pulish to packages
         run: npm publish 
           #npm publish --
