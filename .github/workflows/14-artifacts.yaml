@@ -33,7 +33,7 @@ jobs:
           key: deps-node-modules-${{ hashFiles('14-artifacts/react-app/package-lock.json') }}
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm clean-install
       - name: Unit tests
         run: npm run test -- --coverage
       #- name: Upload test results
@@ -42,7 +42,7 @@ jobs:
          # name: ${{ env.test-coverage-key }}
          # path: 14-artifacts/react-app/coverage
       - name: Build code
-        run: npm clean-install
+        run: npm run build
 
       #- name: Authenticate with GitHub Packages
        # run: npm adduser --registry=https://npm.pkg.github.com/ --scope=@ythrinathareddy --always-auth
