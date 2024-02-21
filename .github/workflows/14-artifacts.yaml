@@ -43,8 +43,9 @@ jobs:
         run: npm run build
       - name: pulish to packages
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
-          npm publish
+          npm publish --registry=https://npm.pkg.github.com/
+      #echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
+          #npm publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITH_TOKEN }}
  #     - name: Upload build files
