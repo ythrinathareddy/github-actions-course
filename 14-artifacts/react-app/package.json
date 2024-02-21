@@ -33,9 +33,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ythrinathareddy/actions/issues"
+    "url": "https://github.com/ythrinathareddy/github-actions-course/issues"
   },
-  "homepage": "https://github.com/ythrinathareddy/actions#readme",
+  "homepage": "https://github.com/ythrinathareddy/github-actions-course#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
