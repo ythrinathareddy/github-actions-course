@@ -48,10 +48,10 @@
 #############################################
 
 {
-    "name": "react-app",
+    "name": "@ythrinathareddy/github-actions-course",
       "repository": {
         "type": "git",
-        "url": "https://github.com/ythrinathareddy/github-actions-course.git"
+        "url": "git+https://ythrinathareddy/github-actions-course.git"
       },
     "version": "0.1.0",
     "private": false,
@@ -94,7 +94,12 @@
       ]
     },
     "publishConfig": {
-      "registry": "https://npm.pkg.github.com/"
-    }
-  }
+      "access": "public"
+    },
+  "bugs": {
+    "url": "https://ythrinathareddy/github-actions-course.git/issues"
+  },
+  "homepage": "ythrinathareddy/github-actions-course.git#readme",
+  "description": ""
+}
   
