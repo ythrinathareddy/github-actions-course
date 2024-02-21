@@ -42,16 +42,18 @@ jobs:
       - name: Build code
         run: npm run build
 
-      - name: Authenticate with GitHub Packages
-        run: npm adduser --registry=https://npm.pkg.github.com/ --scope=@ythrinathareddy --always-auth
-
-      - name: pulish to packages
-        run: |
-          npm publish --registry=https://npm.pkg.github.com/
-      #echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
-          #npm publish
+      #- name: Authenticate with GitHub Packages
+       # run: npm adduser --registry=https://npm.pkg.github.com/ --scope=@ythrinathareddy --always-auth
+      - name: Set up npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=\${NODE_AUTH_TOKEN}" > .npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITH_TOKEN }}
+      - name: pulish to packages
+        run: npm publish
+          #npm publish --registry=https://npm.pkg.github.com/
+      #echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
+          #npm publish
+        
  #     - name: Upload build files
  #       uses: actions/upload-artifact@v4
  #       with:
