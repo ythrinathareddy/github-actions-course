@@ -1,5 +1,9 @@
 {
-  "name": "@ythrinathareddy/github-actions-course",
+  "name": "react-app",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ythrinathareddy/github-actions-course.git"
+    },
   "version": "0.1.0",
   "private": false,
   "dependencies": {
