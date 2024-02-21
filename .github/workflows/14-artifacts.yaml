@@ -34,11 +34,11 @@ jobs:
         run: npm ci
       - name: Unit tests
         run: npm run test -- --coverage
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.test-coverage-key }}
-          path: 14-artifacts/react-app/coverage
+      #- name: Upload test results
+       # uses: actions/upload-artifact@v4
+        #with:
+         # name: ${{ env.test-coverage-key }}
+         # path: 14-artifacts/react-app/coverage
       - name: Build code
         run: npm run build
       - name: pulish to packages
