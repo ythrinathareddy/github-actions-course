@@ -1,5 +1,5 @@
 {
-  "name": "@ythrinathareddy/react-app",
+  "name": "react-app",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -44,3 +44,4 @@
     "registry": "https://npm.pkg.github.com/"
   }
 }
+
