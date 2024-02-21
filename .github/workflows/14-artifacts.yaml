@@ -42,7 +42,9 @@ jobs:
       - name: Build code
         run: npm run build
       - name: pulish to packages
-        run: npm publish 
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
+          npm publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITH_TOKEN }}
  #     - name: Upload build files
