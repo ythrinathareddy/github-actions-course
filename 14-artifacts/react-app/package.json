@@ -2,7 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@ythrinathareddy"
+    "registry": "https://npm.pkg.github.com/@ythrinathareddy/github-actions-course"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
