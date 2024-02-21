@@ -1,5 +1,5 @@
 {
-  "name": "@ythrinathareddy/github-actions-course/react-app",
+  "name": "@ythrinathareddy/github-actions-course",
     "repository": {
       "type": "git",
       "url": "git+https://ythrinathareddy/github-actions-course.git"
