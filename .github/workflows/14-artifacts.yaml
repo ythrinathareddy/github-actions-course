@@ -73,7 +73,3 @@ jobs:
 #
 #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
 #npm token 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
-.npmrc
-
-@ythrinathareddy:registry=https://npm.pkg.github.com/
-//npm.pkg.github.com/{ythrinathareddy}:_authToken={GITA_TOKEN}

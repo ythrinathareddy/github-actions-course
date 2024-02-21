@@ -121,3 +121,8 @@
   "author": "",
   "license": "ISC"
 }*/
+
+.npmrc
+
+@ythrinathareddy:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/{ythrinathareddy}:_authToken={GITA_TOKEN}
