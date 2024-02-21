@@ -1,9 +1,5 @@
 {
   "name": "@ythrinathareddy/github-actions-course",
-    "repository": {
-      "type": "git",
-      "url": "git+https://ythrinathareddy/github-actions-course.git"
-    },
   "version": "0.1.0",
   "private": false,
   "dependencies": {
