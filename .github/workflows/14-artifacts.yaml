@@ -49,7 +49,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: pulish to packages
-        run: npm publishregistry=https://npm.pkg.github.com/
+        run: npm publish 
           #npm publish --
       #echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
           #npm publish
