@@ -49,8 +49,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: pulish to packages
-        run: npm publish
-          #npm publish --registry=https://npm.pkg.github.com/
+        run: npm publishregistry=https://npm.pkg.github.com/
+          #npm publish --
       #echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
           #npm publish
         
@@ -73,3 +73,7 @@ jobs:
 #
 #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
 #npm token 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
+.npmrc
+
+@ythrinathareddy:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/{ythrinathareddy}:_authToken={GITA_TOKEN}
