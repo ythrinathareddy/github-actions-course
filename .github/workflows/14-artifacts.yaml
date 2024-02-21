@@ -42,7 +42,7 @@ jobs:
          # name: ${{ env.test-coverage-key }}
          # path: 14-artifacts/react-app/coverage
       - name: Build code
-        run: npm run build
+        run: npm clean-install
 
       #- name: Authenticate with GitHub Packages
        # run: npm adduser --registry=https://npm.pkg.github.com/ --scope=@ythrinathareddy --always-auth
